@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopcart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+  <div class="site-header">
+    <p>shopcart</p>
+    <input type="text" placeholder="what are you looking for?" />
+    <div>
+      <button class="header-btn">account</button>
+      <button class="header-btn" id="cart-btn">cart</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- CART -->
+    <div id="cart-section">
+      <h3>Your Shopping Cart</h3>
+      <table class="shopping-cart">
+        <thead>
+          <tr>
+            <th></th>
+            <th></th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+      </table>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="categories">
+      <button class="cat-btn active" data-filter="all">All</button>
+      <button class="cat-btn" data-filter="earbuds">Earbuds</button>
+      <button class="cat-btn" data-filter="headphone">Headphones</button>
+      <button class="cat-btn" data-filter="speaker">Speaker</button>
+      <button class="cat-btn" data-filter="charger">Charger</button>
+    </div>
+
+    <p>Products for you</p>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+      <div class="product-item" data-category="earbuds">
+        <img src="https://ptron.in/cdn/shop/products/Bassbuds_1_300x_crop_bottom.png?v=1614769565" />
+        <div class="product-details">
+          <p>Wireless Earbuds</p>
+          <div class="price">$5.00</div>
+        </div>
+        <button class="add-to-cart" data-name="Wireless Earbuds" data-price="5">Add to cart</button>
+      </div>
+
+      <div class="product-item" data-category="headphone">
+        <img src="https://m.media-amazon.com/images/I/31+1OdrDX+L._SY300_SX300_.jpg" />
+        <div class="product-details">
+          <p>Headphones</p>
+          <div class="price">$15.00</div>
+        </div>
+        <button class="add-to-cart" data-name="Headphones" data-price="15">Add to cart</button>
+      </div>
+
+      <div class="product-item" data-category="speaker">
+        <img src="https://ptron.in/cdn/shop/products/B0B7FGND3X.MAIN_300x_crop_bottom.jpg" />
+        <div class="product-details">
+          <p>Speaker</p>
+          <div class="price">$8.00</div>
+        </div>
+        <button class="add-to-cart" data-name="Speaker" data-price="8">Add to cart</button>
+      </div>
+
+      <div class="product-item" data-category="charger">
+        <img src="https://ptron.in/cdn/shop/products/140317569-01_300x_crop_bottom.jpg" />
+        <div class="product-details">
+          <p>Charger</p>
+          <div class="price">$12.00</div>
+        </div>
+        <button class="add-to-cart" data-name="Charger" data-price="12">Add to cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
